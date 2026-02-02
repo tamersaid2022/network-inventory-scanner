@@ -1,0 +1,78 @@
+{
+  "scan_date": "2024-01-15T14:30:00",
+  "scan_duration": "45.2s",
+  "networks_scanned": ["192.168.1.0/24", "192.168.2.0/24"],
+  "total_hosts": 5,
+  "devices": [
+    {
+      "ip_address": "192.168.1.1",
+      "hostname": "core-router-01",
+      "vendor": "Cisco",
+      "model": "ISR4451-X/K9",
+      "software_version": "16.12.4",
+      "serial_number": "FJC2234L0PH",
+      "mac_address": "00:00:0C:01:02:03",
+      "device_type": "Router",
+      "uptime": "45d 12h 30m",
+      "interfaces": 12,
+      "discovery_method": "snmp",
+      "last_seen": "2024-01-15T14:30:05"
+    },
+    {
+      "ip_address": "192.168.1.2",
+      "hostname": "core-router-02",
+      "vendor": "Cisco",
+      "model": "ISR4451-X/K9",
+      "software_version": "16.12.4",
+      "serial_number": "FJC2234L0QR",
+      "mac_address": "00:00:0C:04:05:06",
+      "device_type": "Router",
+      "uptime": "45d 12h 28m",
+      "interfaces": 12,
+      "discovery_method": "snmp",
+      "last_seen": "2024-01-15T14:30:06"
+    },
+    {
+      "ip_address": "192.168.1.10",
+      "hostname": "dist-switch-01",
+      "vendor": "Cisco",
+      "model": "C9300-48P",
+      "software_version": "17.06.05",
+      "serial_number": "FCW2345G0AB",
+      "mac_address": "00:1A:A1:10:20:30",
+      "device_type": "Switch",
+      "uptime": "120d 5h 15m",
+      "interfaces": 52,
+      "discovery_method": "snmp",
+      "last_seen": "2024-01-15T14:30:08"
+    },
+    {
+      "ip_address": "192.168.2.1",
+      "hostname": "nexus-01",
+      "vendor": "Cisco",
+      "model": "N9K-C93180YC-FX",
+      "software_version": "10.3(2)",
+      "serial_number": "FDO2345R0CD",
+      "mac_address": "00:1A:A1:20:30:40",
+      "device_type": "Switch",
+      "uptime": "200d 8h 42m",
+      "interfaces": 54,
+      "discovery_method": "snmp",
+      "last_seen": "2024-01-15T14:30:12"
+    },
+    {
+      "ip_address": "192.168.1.50",
+      "hostname": "access-switch-01",
+      "vendor": "Cisco",
+      "model": "C2960X-48FPS-L",
+      "software_version": "15.2(7)E7",
+      "serial_number": "FOC2234P0EF",
+      "mac_address": "00:1A:A1:50:60:70",
+      "device_type": "Switch",
+      "uptime": "89d 3h 10m",
+      "interfaces": 52,
+      "discovery_method": "ssh",
+      "last_seen": "2024-01-15T14:30:15"
+    }
+  ]
+}

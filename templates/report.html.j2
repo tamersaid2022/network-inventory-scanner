@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>Network Inventory - {{ scan_date }}</title>
+<script src="https://cdn.tailwindcss.com"></script></head>
+<body class="bg-gray-100 p-8"><div class="max-w-7xl mx-auto">
+<div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+<h1 class="text-3xl font-bold mb-4">🔍 Network Inventory Report</h1>
+<p class="text-gray-500">Generated: {{ scan_date }}</p>
+<div class="grid grid-cols-3 gap-4 mt-6">
+<div class="bg-blue-50 rounded-lg p-4 text-center"><div class="text-3xl font-bold text-blue-600">{{ active_hosts }}</div><div>Active Hosts</div></div>
+<div class="bg-green-50 rounded-lg p-4 text-center"><div class="text-3xl font-bold text-green-600">{{ network_devices }}</div><div>Network Devices</div></div>
+<div class="bg-purple-50 rounded-lg p-4 text-center"><div class="text-3xl font-bold text-purple-600">{{ total_ips }}</div><div>IPs Scanned</div></div>
+</div></div>
+<div class="bg-white rounded-lg shadow-lg overflow-hidden"><table class="w-full">
+<thead class="bg-gray-800 text-white"><tr>
+<th class="px-4 py-3 text-left">IP</th><th class="px-4 py-3 text-left">Hostname</th>
+<th class="px-4 py-3 text-left">Vendor</th><th class="px-4 py-3 text-left">Model</th>
+<th class="px-4 py-3 text-left">Version</th><th class="px-4 py-3 text-left">Serial</th>
+</tr></thead><tbody class="divide-y">
+{% for d in devices %}<tr class="hover:bg-gray-50">
+<td class="px-4 py-3">{{ d.ip_address }}</td><td class="px-4 py-3">{{ d.hostname or '-' }}</td>
+<td class="px-4 py-3">{{ d.vendor or '-' }}</td><td class="px-4 py-3">{{ d.model or '-' }}</td>
+<td class="px-4 py-3">{{ d.software_version or '-' }}</td><td class="px-4 py-3">{{ d.serial_number or '-' }}</td>
+</tr>{% endfor %}</tbody></table></div>
+<div class="text-center text-gray-500 mt-8">Network Inventory Scanner | Tamer Khalifa (CCIE #68867)</div>
+</div></body></html>

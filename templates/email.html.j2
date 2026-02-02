@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"></head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+<h2>🔍 Network Inventory Scan Complete</h2>
+<p>Scan completed: {{ scan_date }}</p>
+<table style="border-collapse: collapse; width: 100%;">
+<tr style="background: #333; color: white;">
+<th style="padding: 8px; text-align: left;">Metric</th>
+<th style="padding: 8px; text-align: left;">Value</th></tr>
+<tr><td style="padding: 8px; border: 1px solid #ddd;">Active Hosts</td><td style="padding: 8px; border: 1px solid #ddd;">{{ active_hosts }}</td></tr>
+<tr><td style="padding: 8px; border: 1px solid #ddd;">New Devices</td><td style="padding: 8px; border: 1px solid #ddd;">{{ new_devices }}</td></tr>
+<tr><td style="padding: 8px; border: 1px solid #ddd;">Removed Devices</td><td style="padding: 8px; border: 1px solid #ddd;">{{ removed_devices }}</td></tr>
+</table>
+<p style="color: #666; margin-top: 20px;">Network Inventory Scanner | Tamer Khalifa (CCIE #68867)</p>
+</body></html>

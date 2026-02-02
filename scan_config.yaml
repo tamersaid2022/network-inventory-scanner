@@ -1,0 +1,27 @@
+---
+discovery:
+  networks:
+    - 192.168.1.0/24
+    - 192.168.2.0/24
+  methods: [icmp, tcp, arp]
+  tcp_ports: [22, 23, 80, 443, 161]
+  timeout: 2
+  threads: 50
+
+snmp:
+  enabled: true
+  version: "2c"
+  community: "${SNMP_COMMUNITY}"
+  timeout: 5
+  retries: 2
+
+ssh:
+  enabled: true
+  username: "${SSH_USER}"
+  password: "${SSH_PASS}"
+  timeout: 30
+
+output:
+  directory: "./inventory"
+  formats: [json, csv, excel, html]
+  timestamp: true
